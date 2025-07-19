@@ -1,0 +1,8 @@
+services:
+  electronic-store:
+    image: electronic-store:${tag_eStore:-latest}
+    container_name: electronic-store
+    build:
+      context: .
+    ports:
+      - "8080:8080"
