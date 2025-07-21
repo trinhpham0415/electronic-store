@@ -21,6 +21,6 @@ public class ProductRetrievingServiceImpl implements ProductRetrievingService {
     @Override
     public List<Product> getAllProducts(int page) {
         Pageable pageRequest = PageRequest.of(page, Integer.parseInt(pageSize));
-        return productRepository.findAllWithDiscounts(pageRequest);
+        return productRepository.findAllWithCategoryAndDiscounts(pageRequest);
     }
 }

@@ -2,8 +2,10 @@ package com.example.electronic_store;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
+@EnableJpaAuditing
 public class ElectronicStoreApplication {
 
 	public static void main(String[] args) {

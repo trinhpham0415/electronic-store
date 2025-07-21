@@ -3,6 +3,7 @@ package com.example.electronic_store.service.product;
 import com.example.electronic_store.entity.Category;
 import com.example.electronic_store.entity.Product;
 import com.example.electronic_store.exception.IllegalArgumentException;
+import com.example.electronic_store.exception.ResourceNotFoundException;
 import com.example.electronic_store.repository.CategoryRepository;
 import com.example.electronic_store.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +28,7 @@ public class ProductManipulationServiceImpl implements ProductManipulationServic
             Long categoryId;
             if ((categoryId = newProductCategory.getId()) != null) {
                 newProductCategory = categoryRepository.findById(categoryId)
-                        .orElseThrow(() -> new IllegalArgumentException("Category not found!"));
+                        .orElseThrow(() -> new ResourceNotFoundException("Category not found!"));
             } else if (StringUtils.hasText(newProductCategory.getName())) {
                 newProductCategory = new Category();
                 newProductCategory.setName(newProduct.getCategory().getName());
@@ -39,7 +40,7 @@ public class ProductManipulationServiceImpl implements ProductManipulationServic
     @Override
     public void removeProductById(Long id) {
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Product not found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found!"));
 
         product.setCategory(null);
         productRepository.delete(product);

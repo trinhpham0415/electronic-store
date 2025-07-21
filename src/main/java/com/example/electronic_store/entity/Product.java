@@ -18,14 +18,14 @@ public class Product {
 
     private String name;
 
+    private double price;
+
+    private long stock;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     @JsonIgnoreProperties("products")
     private Category category;
-
-    private double price;
-
-    private Long stock;
 
     @ManyToMany
     @JoinTable(
