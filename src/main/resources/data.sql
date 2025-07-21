@@ -25,8 +25,3 @@ insert into product_discount (product_id, discount_id) values (2, 1); -- Product
 insert into product_discount (product_id, discount_id) values (3, 4); -- Product id = 3 has 1 invalid discount id = 4
 insert into product_discount (product_id, discount_id) values (4, 1); -- Product id = 4 has 1 valid discount id = 1 and 1 invalid discount id = 4
 insert into product_discount (product_id, discount_id) values (4, 4);
-
-insert into customers (name) values ('Trinh Pham'); --1
-insert into customers (name) values ('Lan Nguyen'); --2
-insert into customers (name) values ('Tran Phan'); --3
-insert into customers (name) values ('Ngoc Tran'); --4

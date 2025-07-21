@@ -16,7 +16,14 @@
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+									"type": "string"
+								}
+							]
 						},
 						"method": "GET",
 						"header": [],
@@ -114,7 +121,14 @@
 					"name": "addNewProduct",
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+									"type": "string"
+								}
+							]
 						},
 						"method": "POST",
 						"header": [],
@@ -200,7 +214,14 @@
 					"name": "removeProduct",
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+									"type": "string"
+								}
+							]
 						},
 						"method": "DELETE",
 						"header": [],
@@ -274,7 +295,14 @@
 							"name": "produceReceipt",
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+											"type": "string"
+										}
+									]
 								},
 								"method": "POST",
 								"header": [],
@@ -416,13 +444,20 @@
 							"name": "addProductToShoppingCart",
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+											"type": "string"
+										}
+									]
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"productId\": 4,\r\n    \"quantity\": 2\r\n}",
+									"raw": "{\r\n    \"productId\": 2,\r\n    \"quantity\": 2\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -430,14 +465,14 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/customer/4/shopping-cart/products",
+									"raw": "localhost:8080/customer/6/shopping-cart/products",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
 										"customer",
-										"4",
+										"6",
 										"shopping-cart",
 										"products"
 									]
@@ -506,13 +541,20 @@
 							"name": "removeProductFromShoppingCart",
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+											"type": "string"
+										}
+									]
 								},
 								"method": "DELETE",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"customerId\": 4,\r\n    \"productId\": 4\r\n}",
+									"raw": "{\r\n    \"productId\": 2\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -520,13 +562,14 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/customer/shopping-cart/products",
+									"raw": "localhost:8080/customer/4/shopping-cart/products",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
 										"customer",
+										"4",
 										"shopping-cart",
 										"products"
 									]
@@ -538,7 +581,14 @@
 							"name": "getInProgressShoppingCart",
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJoYW4ubHkiLCJ1c2VybmFtZSI6Imhhbi5seSIsImV4cCI6MTc1MzEwMDg0OX0.pDjY19CcrBbNkkGuj6XqDyxouhC4Vupx3gIekP9Rm6k",
+											"type": "string"
+										}
+									]
 								},
 								"method": "GET",
 								"header": [],
@@ -605,6 +655,208 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Han Ly\",\r\n    \"username\": \"han.ly\",\r\n    \"password\": \"hanly123\",\r\n    \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Han Ly\",\r\n    \"username\": \"han.ly\",\r\n    \"password\": \"hanly123\",\r\n    \"role\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Jul 2025 10:26:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"lan.ly\",\r\n    \"password\": \"lanly123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lan.ly\",\r\n    \"password\": \"lanly123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Jul 2025 10:26:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsYW4ubHkiLCJ1c2VybmFtZSI6Imxhbi5seSIsImV4cCI6MTc1MzEwMDc4NH0.5v3Ifp9w0BaUeF3o79ZvGLzC6MmDYa2-VN2lVtEYkEs\"\n}"
 				}
 			]
 		}

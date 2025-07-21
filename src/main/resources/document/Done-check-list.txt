@@ -22,6 +22,6 @@ price
 4. Get all receipts (DONE)
 5. If any part fails (e.g., insufficient stock, invalid promo), no partial update (DONE: insufficient stock)
 should persist.
-6. Authenticate, authorize roles admin, customer
+6. Authenticate, authorize roles admin, customer (DONE)
 7. Everything should be tested with automated tests. If any requirement is not 
 satisfied, a test should fail 
