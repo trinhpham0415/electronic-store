@@ -13,5 +13,11 @@
 ## Access to h2 database (you can get URL, username and password in application.yml):
 ### `http://localhost:8080/h2-console`
 
+## Requirement document
+### `src/main/resources/document/Altech - Java Backend Technical Assessment_2025.pdf`
+
+## Postman api collections
+### `src/main/resources/document/postman-api`
+
 
 
